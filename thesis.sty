@@ -1,0 +1,72 @@
+\ProvidesPackage{thesis}
+
+% -----------------------------------------------------------------------
+% packages
+% -----------------------------------------------------------------------
+
+% times-like fonts
+\usepackage[T1]{fontenc}
+\usepackage{tgtermes}
+
+% set margins
+\usepackage[left=3.5cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+% modular documents using subfiles
+\usepackage{subfiles}
+
+% set line spacing
+\usepackage{setspace}
+
+% set paragraph spacing
+\usepackage{parskip}
+
+% figures and captions
+\usepackage{graphicx}
+\usepackage[belowskip=0pt,aboveskip=5pt]{caption}
+\usepackage{subcaption}
+
+% tables
+%\usepackage{tabularx}
+\usepackage{multirow}
+
+% click-able elements like terms chapters etc 
+\usepackage[bookmarks,hidelinks]{hyperref}
+
+% urls in .bib files
+\usepackage{url}
+
+% BibLaTeX with ieee style
+%\usepackage[style=ieee,backend=biber]{biblatex}
+%\addbibresource{references.bib}
+
+% glossary and terms
+% use the option `acronym` for a separate list of acronyms
+\usepackage[toc]{glossaries}
+\makeglossaries
+
+% automatically add figures, tables etc in TOC
+\usepackage{tocbibind}
+
+% underline headers and footers
+\usepackage{underlin}
+\pagestyle{underline}
+
+% source code highlighting plus courier font which supplies boldface
+\usepackage{listings}
+\usepackage{courier}
+
+% -----------------------------------------------------------------------
+% commands
+% -----------------------------------------------------------------------
+\renewcommand{\bibname}{References}
+\newcommand{\degree}{\ensuremath{^\circ}}
+
+% -----------------------------------------------------------------------
+% environments
+% -----------------------------------------------------------------------
+
+% abstract environment for book class
+\newenvironment{abstract}{
+    \onehalfspacing%
+    \chapter*{\centering Abstract}%
+}{}

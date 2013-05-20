@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper,twoside,openany]{book}
+
+% all packages are defined in thesis.sty
+\usepackage{thesis}
+
+\begin{document}
+
+% suppress page numbering before frontmatter
+\pagenumbering{gobble}
+
+% include front-page content
+\input{./frontmatter/front.tex}
+\thispagestyle{empty}
+\input{./frontmatter/inner.tex}
+
+% add abstact
+\input{./frontmatter/abstract.tex}
+
+\frontmatter
+
+% add toc
+\tableofcontents
+
+% add list of figures/tables/listings
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+% hack to remove an extra generated page
+\clearpage
+\pagenumbering{gobble}
+
+% add glossary (terms and acronyms)
+\input{./glossary/gls.tex}
+
+%\authorlist
+%\dedicationpage
+%\acknowledgments
+
+\mainmatter
+
+% include actual content
+\onehalfspacing
+
+\subfile{./chapters/chapter1}
+%\subfile{./chapters/chapter2}
+%\subfile{./chapters/chapter3}
+%\subfile{./chapters/chapter4}
+%\subfile{./chapters/chapter5}
+%\subfile{./chapters/chapter6}
+
+\singlespacing
+
+% appendices
+\appendix
+\input{./endmatter/appendix.tex}
+
+% back matter
+\backmatter
+
+% print terms and definitions
+\printglossaries
+
+% if you use BibLaTeX you need this
+%\printbibliography
+
+% bibTex - Vancouver (numbering) style
+\bibliographystyle{vancouver}
+\bibliography{references}
+
+\end{document}
