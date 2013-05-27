@@ -23,10 +23,34 @@ The main file is the `thesis.tex` which in turn includes the `thesis.sty` file. 
 commands, environments and packages are defined in the `thesis.sty` file, while the
 `thesis.tex` includes the chapters, the references and defines a basic structure.
 
-Chapters are included from the `chapters` folder. The term definitions reside in the 
+Chapters are included from the `chapters` folder using the `subfiles` package.
+The term definitions reside in the 
 `glossary` folder. For images figures etc I prefer the `img` folder using a flat layout, 
 but that's more of a personal taste. Finally frontmatter and
 backmatter are in the `frontmatter` and `endmatter` folders respectively.
+
+Packages
+--------
+
+The list of packages used:
+
+* fontenc
+* tgtermes
+* geometry
+* subfiles
+* setspace
+* parskip
+* graphicx
+* caption
+* subcaption
+* multirow
+* hyperref
+* url
+* glossaries
+* tocbibind
+* underlin
+* listings
+
 
 Scripts
 -------
